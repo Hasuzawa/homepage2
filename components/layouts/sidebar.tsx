@@ -1,14 +1,14 @@
-import { useTranslation } from 'next-i18next'
+import LogoSection from "~/components/layouts/logoSection"
+import Navigator from "~/components//layouts/navigator"
+import Footer from "~/components/layouts/footer"
 
 const SideBar = () => {
-    const { t } = useTranslation('sidebar');
 
     return (
-        <div className="bg-red-300 h-screen w-60">
-            <ul>
-                <li>{t('introduction')}</li>
-                <li>{t('techs')}</li>
-            </ul>
+        <div className="bg-red-300 h-screen w-60 flex flex-col">
+            <LogoSection />
+            <Navigator />
+            <Footer />
         </div>
     );
 }
